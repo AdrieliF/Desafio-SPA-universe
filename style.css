@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62,5%;
+
+  --color-click-button: #FFFFFF;
+  --color-links: #C4C4CC;
+  --color-text: #E1E1E6;
+  --button-text-hover: #02799D;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  font-weight: 400;
+}
+
+body {
+  overflow: hidden;
+}
+
+img {
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.logo img {
+  width: 4.9rem;
+  height: 4.2rem;
+}
+
+h1, button, nav a:hover {
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  padding: 4rem 7.2rem;
+  gap: 5rem;
+  align-items: center;
+  position: absolute;
+}
+
+nav, a {
+  text-decoration: none;
+  color: var(--color-links);
+  font-size: 2rem;
+}
+
+nav, a:hover {
+  color: var(--color-click-button);
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(--color-text);
+  line-height: 6rem;
+}
+
+p {
+  font-size: 1.6rem;
+  color: var(--color-text);
+  line-height: 2.8rem;
+  width: 60rem;
+}
+
+.home {
+  position: absolute;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+  height: calc(100vh - 350px);
+  width: 100vw;
+}
+
+button {
+  background: none;
+  border-radius: 5px;
+  border: 2px solid #FFF;
+  color: var(--color-click-button);
+  padding: 12px 32px;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--color-click-button);
+  color: var(--button-text-hover);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  position: absolute;
+  top: 200px;
+  height: calc(100vh - 250px);
+  width: 100vw;
+  padding-left: 7.2rem;
+}
+
+.container p {
+  width: fit-content;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    padding: 4rem;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  h1, a {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    gap: 1rem;
+    display: flex;
+    padding: 1.3rem 1.3rem 3rem;
+    top: 50px; 
+    height: 100vh; 
+  }
+
+  .container p {
+    width: fit-content;
+    overflow-x: auto;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .logo img {
+    display: none;
+    visibility: hidden;
+  }
+  
+  p, nav a {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    display: flex;
+    padding: 0;
+    gap: 1.3rem;
+    align-items: center;
+    padding-top: 2rem;
+  }
+
+  .home {
+    gap: 0;
+  }
+
+  .logo img {
+    width: 2.9rem;
+    height: 2.2rem;
+  }
+
+  .container {
+    gap: 1rem;
+    display: flex;
+    padding: 1.3rem 1.3rem 3rem;
+    top: 50px; 
+    height: 100vh; 
+  }
+
+  .container p {
+    width: fit-content;
+    overflow-x: auto;
+  }
+}
